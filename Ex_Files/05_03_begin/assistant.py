@@ -1,9 +1,9 @@
 import os
 from openai import OpenAI
 
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["GITHUB_TOKEN"] #allows you to access github models
 endpoint = "https://models.inference.ai.azure.com"
-model_name = "gpt-4o"
+model_name = "gpt-4o" 
 
 client = OpenAI(
     base_url=endpoint,
@@ -22,7 +22,7 @@ response = client.chat.completions.create(
         }
     ],
     model=model_name,
-    temperature=1.0,
+    temperature=1.0, #predicts how the model is going to do thing
     max_tokens=1000,
     top_p=1.0
 )
