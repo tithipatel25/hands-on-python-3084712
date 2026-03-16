@@ -14,3 +14,5 @@ for year in last_twenty_years:
   # // floor the valueby 10 million
   print(f"{year['date']}: {year['value']}",display_width * "=") #layout of printing
 
+
+#this code helps us grab data from api and work with it
