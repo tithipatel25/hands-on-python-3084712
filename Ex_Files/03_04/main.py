@@ -29,6 +29,13 @@ with open("laureates.csv", "r") as f:
 laureates_beginning_with_a = []
 # LinkedIn learner code here
 
+#reading the .csv file has already been done
+#therefore, for each nobel prize winner (lareate) in all the lareates (the one created when we read the .csv file)
+#if the first letter of the value is 'A' in the key 'name', append the entire lareate to our new list
+for lareate in laureates: 
+    if lareate['name'][0] == "A":
+        laureates_beginning_with_a.append(lareate)
+
 
 with open("laureates.json", "w") as f:
-    json.dump(laureates_beginning_with_a, f, indent=2)
+    json.dump(laureates_beginning_with_a, f, indent=2) #create a new 
